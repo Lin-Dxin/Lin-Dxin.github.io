@@ -13,24 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="大星">
+  <meta name="author" content="Lin_Dxin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="主要步骤 下载Node.js以及安装hexo引擎 初始化Hexo博客文件目录 配置git、准备远程推送 创建Github仓库 配置config文件 更新并推送博客内容  1. 下载Node.js以及安装hexo引擎 下载NodeJS,尽量下载版本大于15的，否则后期很多主题不能使用。 链接：https:&#x2F;&#x2F;nodejs.org&#x2F;zh-cn&#x2F;download&#x2F;   打开cmd使用npm安装hexo">
+    <meta name="description" content="什么是分支使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。即：以不同的开发方向进行开发，但主要的开发方向仍然可以保留 基本操作 创建分支：git branch (branchname) 切换分支：git checkout (branchname) 合并分支：git merge 删除分区：git branch -d (branchname) 查看本地仓库与远程分支的区别 g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客搭建日志-hexo">
-<meta property="og:url" content="http://example.com/2022/09/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97-hexo/index.html">
+<meta property="og:title" content="Git学习记录">
+<meta property="og:url" content="http://example.com/2023/03/04/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="大星空间">
-<meta property="og:description" content="主要步骤 下载Node.js以及安装hexo引擎 初始化Hexo博客文件目录 配置git、准备远程推送 创建Github仓库 配置config文件 更新并推送博客内容  1. 下载Node.js以及安装hexo引擎 下载NodeJS,尽量下载版本大于15的，否则后期很多主题不能使用。 链接：https:&#x2F;&#x2F;nodejs.org&#x2F;zh-cn&#x2F;download&#x2F;   打开cmd使用npm安装hexo">
+<meta property="og:description" content="什么是分支使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。即：以不同的开发方向进行开发，但主要的开发方向仍然可以保留 基本操作 创建分支：git branch (branchname) 切换分支：git checkout (branchname) 合并分支：git merge 删除分区：git branch -d (branchname) 查看本地仓库与远程分支的区别 g">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-01T05:38:18.000Z">
-<meta property="article:modified_time" content="2022-09-02T07:19:47.950Z">
+<meta property="article:published_time" content="2023-03-04T02:30:15.000Z">
+<meta property="article:modified_time" content="2023-03-04T02:30:53.222Z">
 <meta property="article:author" content="Lin_Dxin">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>博客搭建日志-hexo - 大星空间</title>
+  <title>Git学习记录 - 大星空间</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +195,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="博客搭建日志-hexo"></span>
+            <span id="subtitle" data-typed-text="Git学习记录"></span>
           
         </div>
 
@@ -206,8 +206,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-01 13:38" pubdate>
-          2022年9月1日 下午
+        <time datetime="2023-03-04 10:30" pubdate>
+          2023年3月4日 上午
         </time>
       </span>
     
@@ -218,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          852 字
+          823 字
         
       </span>
     
@@ -229,7 +229,7 @@
         
         
         
-          8 分钟
+          7 分钟
         
       </span>
     
@@ -267,58 +267,34 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">博客搭建日志-hexo</h1>
+            <h1 style="display: none">Git学习记录</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h1><ol>
-<li>下载Node.js以及安装hexo引擎</li>
-<li>初始化Hexo博客文件目录</li>
-<li>配置git、准备远程推送</li>
-<li>创建Github仓库</li>
-<li>配置config文件</li>
-<li>更新并推送博客内容</li>
+                <h1 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h1><p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。<br>即：以不同的开发方向进行开发，但主要的开发方向仍然可以保留</p>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><ol>
+<li>创建分支：<br><code>git branch (branchname)</code></li>
+<li>切换分支：<br><code>git checkout (branchname)</code></li>
+<li>合并分支：<br><code>git merge</code></li>
+<li>删除分区：<br><code>git branch -d (branchname)</code></li>
+<li>查看本地仓库与远程分支的区别</li>
+<li>git fetch origin –prune 更新本地分支信息</li>
 </ol>
-<h2 id="1-下载Node-js以及安装hexo引擎"><a href="#1-下载Node-js以及安装hexo引擎" class="headerlink" title="1. 下载Node.js以及安装hexo引擎"></a>1. 下载Node.js以及安装hexo引擎</h2><ul>
-<li>下载NodeJS,尽量下载版本大于15的，否则后期很多主题不能使用。<blockquote>
-<p>链接：<a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a></p>
-</blockquote>
-</li>
-<li>打开cmd使用npm安装hexo <code>npm install hexo-cli -g</code></li>
-</ul>
-<h2 id="2-初始化Hexo博客文件目录"><a href="#2-初始化Hexo博客文件目录" class="headerlink" title="2. 初始化Hexo博客文件目录"></a>2. 初始化Hexo博客文件目录</h2><ul>
-<li>初始化博客目录：找一个空的文件夹 <code>hexo init blog</code> 会生成一个blog目录，包含hexo博客的配置文件</li>
-<li>进入blog目录，在cmd下输入<code>hexo g</code>就可以生成一个最初始的hexo博客</li>
-<li>开启hexo博客服务：在cmd下输入<code>hexo s</code>并会默认在 <a href="localhost:4000">本地4000端口</a> 生成博客网站</li>
-</ul>
-<h2 id="3-配置git、准备远程推送"><a href="#3-配置git、准备远程推送" class="headerlink" title="3. 配置git、准备远程推送"></a>3. 配置git、准备远程推送</h2><ul>
-<li><p>接下来准备将博客同步到Github上，需要保证本机电脑上安装了<strong>git</strong>，如若没有，跳转到<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">这里</a>进行下载安装</p>
-</li>
-<li><p>确保配置好了git的全局信息：包括邮箱、用户名</p>
-<blockquote>
-<p>配置命令如下</br><br>git config –global user.name “用户名” </br><br>git config –global user.name “邮箱”</p>
-</blockquote>
-</li>
-<li><p>确保配置好了与Github的SSH Key，教程跳转至<a target="_blank" rel="noopener" href="https://docs.github.com/cn/authentication/connecting-to-github-with-ssh">此</a></p>
-</li>
-<li><p>安装hexo与git的连接插件<code>npm install hexo-deployer-git --save</code></p>
-</li>
-</ul>
-<h2 id="4-创建Github仓库"><a href="#4-创建Github仓库" class="headerlink" title="4. 创建Github仓库"></a>4. 创建Github仓库</h2><ul>
-<li>在github中New Repository</li>
-<li>取名严格按照<code>name.github.io</code>其中name为你的Github名</li>
-</ul>
-<h2 id="5-配置config文件"><a href="#5-配置config文件" class="headerlink" title="5. 配置config文件"></a>5. 配置config文件</h2><ul>
-<li>回到blog目录下，修改_config.yml文件：找到deploy关键字，并在type后加上 ‘git’ 效果为<code>type: git</code></li>
-<li>换行添加<code>repo: &lt;刚刚创建的github仓库HTTP链接&gt;</code></li>
-<li>保存退出</li>
-</ul>
-<h2 id="6-更新并推送博客内容"><a href="#6-更新并推送博客内容" class="headerlink" title="6. 更新并推送博客内容"></a>6. 更新并推送博客内容</h2><ul>
-<li>在blog目录下打开cmd，输入<code>hexo g</code>生成新的文件</li>
-<li>再输入<code>hexo d</code> 部署到github</li>
-<li>中间可能要求输入用户名、邮箱，<strong>输入github的用户名与邮箱</strong>即可</li>
-</ul>
+<h1 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h1><ol>
+<li>查看历史提交记录<br><code>git log</code></li>
+<li>以列表形式查看指定文件的历史修改记录。<br><code>git blame &lt;file&gt;</code></li>
+</ol>
+<h1 id="git-标签"><a href="#git-标签" class="headerlink" title="git 标签"></a>git 标签</h1><p>如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。<br><code>git tag -a v1.0 </code><br>-a 选项意为”创建一个带注解的标签”。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会让你添加个标签的注解。</p>
+<h1 id="Git-取消文件跟踪"><a href="#Git-取消文件跟踪" class="headerlink" title="Git 取消文件跟踪"></a>Git 取消文件跟踪</h1><ol>
+<li><code>git rm -r -n --cached 文件或目录</code>:  列出你需要取消跟踪的文件，可以查看列表，检查下是否有误操作导致一些不应该被取消的文件取消了，是为了再次确认的。-r 表示递归，-n 表示先不删除，只是列出文件。</li>
+<li><code>git rm -r --cached 文件</code>，取消缓存不想要跟踪的文件</li>
+<li>修改根目录.gitignore 文件，添加你希望忽略的文件&#x2F;目录。</li>
+<li>commit and push</li>
+</ol>
+<h1 id="Git-撤销commit"><a href="#Git-撤销commit" class="headerlink" title="Git 撤销commit"></a>Git 撤销commit</h1><h2 id="如果只是想修改注释，可以这样操作"><a href="#如果只是想修改注释，可以这样操作" class="headerlink" title="如果只是想修改注释，可以这样操作"></a>如果只是想修改注释，可以这样操作</h2><p><code>git commit --amend</code><br>这个时候进入vim编辑，直接修改即可，修改完注释，退出vim编辑<br>:wq保存已编辑的注释，重新git push即可</p>
+<h2 id="要撤回commit"><a href="#要撤回commit" class="headerlink" title="要撤回commit"></a>要撤回commit</h2><p><code>git reset --soft HEAD^</code><br>这样就能成功的撤回你刚刚的commit操作。</p>
+<p>HEAD^的意思是上一个版本，也可以写成HEAD<del>1<br>如果你进行了2次commit，想都撤回，可以使用HEAD</del>2<br><strong>注意，这个命令仅仅是撤回commit操作，写的代码仍然保留</strong></p>
 
                 
               </div>
@@ -336,20 +312,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>博客搭建日志-hexo</div>
-      <div>http://example.com/2022/09/01/博客搭建日志-hexo/</div>
+      <div>Git学习记录</div>
+      <div>http://example.com/2023/03/04/Git学习记录/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>大星</div>
+          <div>Lin_Dxin</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月1日</div>
+          <div>2023年3月4日</div>
         </div>
       
       
@@ -379,15 +355,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/03/04/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="Git学习记录">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git学习记录</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2022/09/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97-hexo/" title="博客搭建日志-hexo">
+                        <span class="hidden-mobile">博客搭建日志-hexo</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

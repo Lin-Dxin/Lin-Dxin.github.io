@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Git学习记录</title>
+    <link href="/2023/03/04/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/03/04/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h1><p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。<br>即：以不同的开发方向进行开发，但主要的开发方向仍然可以保留</p><h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><ol><li>创建分支：<br><code>git branch (branchname)</code></li><li>切换分支：<br><code>git checkout (branchname)</code></li><li>合并分支：<br><code>git merge</code></li><li>删除分区：<br><code>git branch -d (branchname)</code></li><li>查看本地仓库与远程分支的区别</li><li>git fetch origin –prune 更新本地分支信息</li></ol><h1 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h1><ol><li>查看历史提交记录<br><code>git log</code></li><li>以列表形式查看指定文件的历史修改记录。<br><code>git blame &lt;file&gt;</code></li></ol><h1 id="git-标签"><a href="#git-标签" class="headerlink" title="git 标签"></a>git 标签</h1><p>如果你达到一个重要的阶段，并希望永远记住那个特别的提交快照，你可以使用 git tag 给它打上标签。<br><code>git tag -a v1.0 </code><br>-a 选项意为”创建一个带注解的标签”。 不用 -a 选项也可以执行的，但它不会记录这标签是啥时候打的，谁打的，也不会让你添加个标签的注解。</p><h1 id="Git-取消文件跟踪"><a href="#Git-取消文件跟踪" class="headerlink" title="Git 取消文件跟踪"></a>Git 取消文件跟踪</h1><ol><li><code>git rm -r -n --cached 文件或目录</code>:  列出你需要取消跟踪的文件，可以查看列表，检查下是否有误操作导致一些不应该被取消的文件取消了，是为了再次确认的。-r 表示递归，-n 表示先不删除，只是列出文件。</li><li><code>git rm -r --cached 文件</code>，取消缓存不想要跟踪的文件</li><li>修改根目录.gitignore 文件，添加你希望忽略的文件&#x2F;目录。</li><li>commit and push</li></ol><h1 id="Git-撤销commit"><a href="#Git-撤销commit" class="headerlink" title="Git 撤销commit"></a>Git 撤销commit</h1><h2 id="如果只是想修改注释，可以这样操作"><a href="#如果只是想修改注释，可以这样操作" class="headerlink" title="如果只是想修改注释，可以这样操作"></a>如果只是想修改注释，可以这样操作</h2><p><code>git commit --amend</code><br>这个时候进入vim编辑，直接修改即可，修改完注释，退出vim编辑<br>:wq保存已编辑的注释，重新git push即可</p><h2 id="要撤回commit"><a href="#要撤回commit" class="headerlink" title="要撤回commit"></a>要撤回commit</h2><p><code>git reset --soft HEAD^</code><br>这样就能成功的撤回你刚刚的commit操作。</p><p>HEAD^的意思是上一个版本，也可以写成HEAD<del>1<br>如果你进行了2次commit，想都撤回，可以使用HEAD</del>2<br><strong>注意，这个命令仅仅是撤回commit操作，写的代码仍然保留</strong></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客搭建日志-hexo</title>
     <link href="/2022/09/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97-hexo/"/>
     <url>/2022/09/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%97%A5%E5%BF%97-hexo/</url>
