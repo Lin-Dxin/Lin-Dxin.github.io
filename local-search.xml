@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>DAO/Service/Controller三层架构</title>
+    <link href="/2023/03/05/DAO-Service-Controller%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/"/>
+    <url>/2023/03/05/DAO-Service-Controller%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/</url>
+    
+    <content type="html"><![CDATA[<h1 id="1-Controller层"><a href="#1-Controller层" class="headerlink" title="1.Controller层"></a>1.Controller层</h1><p><strong>负责在页面和程序之间传输数据的，做页面的跳转。用户在页面中填写完表单数据，点击提交按钮，页面的表单数据由Controller传入Service层。</strong></p><p>Controller层负责具体的业务模块流程的控制，在此层要调用service层的接口来控制业务流程，控制的配置也同样是在Spring的配置文件里进行，针对具体的业务流程，会有不同的控制器。设计过程可以将流程进行抽象归纳，设计出可以重复利用的子单元流程模块。这样不仅使程序结构变得清晰，也能减少代码量。</p><h1 id="2-Service层"><a href="#2-Service层" class="headerlink" title="2.Service层"></a>2.Service层</h1><p>负责业务模块的应用逻辑设计。<strong>Controller只负责管理，而Service负责实施</strong>。同样是首先设计接口，再设计其实现类，然后在Spring的配置文件中配置其实现的关联。我们就可以在应用中调用service接口来进行业务处理。service层的业务实，具体要调用已经定义的dao层接口，封装service层业务逻辑有利于通用的业务逻辑的独立性和重复利用性。</p><h1 id="3-DAO层"><a href="#3-DAO层" class="headerlink" title="3.DAO层"></a>3.DAO层</h1><p>负责对数据向数据库增删改查的操作。</p><p>持久层（DAO）<br>采用DAO模式，建立实体类和数据库表映射（ORM映射）。也就是哪个类对应哪个表，哪个属性对应哪个列。持久层的目的就是，完成对象数据和关系数据的转换。</p><p>dao层主要做数据持久层的工作，封装了负责与数据库进行联系的一些任务，dao层的设计首先是设计dao层的接口，然后在Spring的配置文件中定义该接口的实现类，然后就可以调用该接口来进行数据业务的处理，而不用关心此接口的具体实现类是哪个类，结构清晰，DAO层的数据源，以及有关的数据库连接参数都在Spring配置文件中进行配置。</p><p><strong>Service层是建立在DAO层之上的，建立了DAO层后才可以建立Service层，然后建立Controller层。因而Service位于中间。所以既调用DAO层的接口，又要提供接口给Controller层的类来进行调用。每个模型都有一个Service接口，每个接口分别封装各自的业务处理方法。</strong></p><h1 id="4-三大框架Spring，SpringMVC和MyBatis"><a href="#4-三大框架Spring，SpringMVC和MyBatis" class="headerlink" title="4.三大框架Spring，SpringMVC和MyBatis"></a>4.三大框架Spring，SpringMVC和MyBatis</h1><p>在SpringMVC + Spring + Mybatis的系统中，</p><p>对象调用的顺序：<strong>JSP—Controller—Service—DAO—Mybatis</strong></p><p>数据的流向是：<strong>用户输入数据，Controller接收数据，对数据进行封装，再调用业务层，进行各种业务处理，而业务层收到这个数据之后，会调用DAO，进行持久化操作。</strong></p><p>Spring对应Service，是一个轻量级的控制反转(IoC)和面向切面(AOP)的框架。控制反转：由容器控制程序之间的依赖关系，而非传统实现中，由程序代码直接操控。控制权由应用代码转移到了外部容器中，控制权的转移，就是所谓反转。依赖注入，即组件之间的依赖关系由容器在运行期决定，即由容器动态地将某种依赖关系注入到组件之中，起到了解耦的作用。省去了在类里面new对象的过程，把这个调用与被调用的关系直接展示到了配置文件里。</p><p>SpringMVC对应Controller，在SSM框架中起控制的作用，其核心是Controller，主要对逻辑关系的处理进行控制。</p><p>Mybitis对应DAO，是持久层，是一种新的对象、关系的映射工具，根据数据库的表，反向生成实体类，提供了从Java类到数据表的映射，也提供了数据查询和恢复等机制，减少了数据访问的复杂度。把对数据库的直接操作，转换为对对象的操作。</p><p><img src="/../../_resources/dec02d1bf1af31e110e9d20ac2d45e64.png" alt="dec02d1bf1af31e110e9d20ac2d45e64.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Git学习记录</title>
     <link href="/2023/03/04/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     <url>/2023/03/04/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
